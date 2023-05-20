@@ -1,0 +1,97 @@
+<template>
+  <header>
+    <nav class="navbar sticky-top">
+      <div class="container-fluid">
+        <div class="slideDownContainer justify-content-space-between me-4 ms-4">
+          <router-link to="/" class="baseThemeBtn">
+            <font-awesome-icon :icon="['fas', 'house']"/>
+          </router-link>
+          <a>
+            <button class="baseThemeBtn" id="lightBtn" @click="setTheme('light')" title="Trocar Tema">
+              <font-awesome-icon :icon="['fas', 'toggle-off']" size="xl"/>
+            </button>
+            <button class="baseThemeBtn" id="darkBtn" @click="setTheme('dark')" title="Trocar Tema">
+              <font-awesome-icon :icon="['fas', 'toggle-on']" size="xl"/>
+            </button>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="baseThemeBtn">
+              <font-awesome-icon :icon="['fas', 'circle-chevron-down']"/>
+            </span>
+          </button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-dismiss="offcanvas">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navegação</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-space-between">
+              <li class="nav-item">
+                <router-link to="/">
+                  Home
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/experiencia">
+                  Experiência
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/conhecimentos">
+                  Conhecimentos
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+</template>
+
+<script setup>
+  const setTheme = theme => document.documentElement.className = theme;
+</script>
+
+<style lang="scss" scoped>
+  ul {
+    align-items: center;
+  }
+  nav {
+    a {
+      &:not(.router-link-exact-active):hover {
+        color: var(--secondary);
+      }
+      &.router-link-exact-active {
+        border-bottom-color: var(--secondary);
+
+        &:hover {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  ul {
+    gap: 1rem;
+  }
+  .offcanvas-body, .offcanvas-header {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .slideDownContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    line-height: 0;
+    justify-content: space-between;
+    
+    animation: slideDown 1s forwards
+  }
+</style>
