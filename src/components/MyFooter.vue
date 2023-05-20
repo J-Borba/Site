@@ -8,7 +8,7 @@
         <a href="mailto:joao3borba3@gmail.com" target="_blank">
           <font-awesome-icon :icon="['far', 'envelope']" size="xl"/>
         </a>
-        <a href="https://www.linkedin.com/in/joao-borba27/">
+        <a href="https://www.linkedin.com/in/joao-borba27/" target="_blank">
           <font-awesome-icon :icon="['fab', 'linkedin']" size="xl"/>
         </a>
       </div>
