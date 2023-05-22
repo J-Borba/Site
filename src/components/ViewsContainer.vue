@@ -17,7 +17,7 @@
     justify-content: center;
     
     width: 60%;
-    min-height: 80svh;
+    min-height: 100svh;
     gap: 2rem;
     padding: 0.875rem;
     margin: 1.5rem auto;

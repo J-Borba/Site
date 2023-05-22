@@ -1,7 +1,7 @@
 <template>
-  <slot></slot>
   
   <main>
+    <slot></slot>
     <section class="slideIn section-1">
       <div class="sectionShort">
         <h2>
