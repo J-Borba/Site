@@ -3,7 +3,7 @@
     <div class="title">
       <h2>Experiências Profissionais</h2>
     </div>
-    <div class="jobDescContainer" v-for="job in jobs" :key="job.id">
+    <div class="jobDescContainer" :id="job.sigla" v-for="job in jobs" :key="job.id">
       <h3>{{ job.empresa }}</h3>
       <div class="experiencias" v-for="experiencia in job.experiencias" :key="experiencia.cargo">
         <div class="cargo-periodo">
@@ -26,6 +26,7 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
     {
       id: 1,
       empresa: "Associação Brasileira Beneficente de Reabilitação (ABBR)",
+      sigla: 'ABBR',
       experiencias: [
         {
           cargo: "Estagiário",

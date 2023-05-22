@@ -8,6 +8,8 @@ import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { faHandPointDown } from '@fortawesome/free-regular-svg-icons'
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
+import { faTurnUp } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   faGithub,
@@ -18,4 +20,7 @@ library.add(
   faCircleChevronDown,
   faEnvelope,
   faHome,
-  faHandPointDown)
+  faHandPointDown,
+  faCircleInfo,
+  faTurnUp
+)
