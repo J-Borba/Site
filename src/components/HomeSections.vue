@@ -11,7 +11,7 @@
           <div class="baseDesc">
             <h5>Associação Brasileira Beneficente de Reabilitação</h5>
             <p>Analista de Sistemas</p>
-            <p>mar/2022 - atual</p>
+            <p>início: mar/2022</p>
           </div>
           <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.6188111481233!2d-43.220514285033204!3d-22.964261584982655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd59ea959a3a3%3A0x7429ede8067295be!2sABBR!5e0!3m2!1spt-BR!2sbr!4v1684791000938!5m2!1spt-BR!2sbr" :width="mapsWidth" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
           <div class="vagaContainer">
