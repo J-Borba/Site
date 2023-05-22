@@ -3,9 +3,6 @@
     <nav class="navbar sticky-top">
       <div class="container-fluid">
         <div class="slideDownContainer justify-content-space-between me-4 ms-4">
-          <router-link class="logoRouter" to="/">
-            <img src="@/assets/myLogoNoBg.png" class="logo" alt="">
-          </router-link>
           <a>
             <button class="baseThemeBtn" id="lightBtn" @click="setTheme('light')" title="Trocar Tema">
               <font-awesome-icon :icon="['fas', 'toggle-off']" size="xl"/>
@@ -14,6 +11,9 @@
               <font-awesome-icon :icon="['fas', 'toggle-on']" size="xl"/>
             </button>
           </a>
+          <router-link class="logoRouter" to="/">
+            <img src="@/assets/myLogoNoBg.png" class="logo" alt="">
+          </router-link>
           <div class="navegacaoBtnContainer">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
               <span class="baseThemeBtn">
@@ -113,18 +113,9 @@
       cursor: pointer;
     }
   }
-  .navegacaoBtnContainer {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 6rem;
-  }
   @media (max-width: 1168px) {
     .logo {
       width: 4rem;
     }
-    .navegacaoBtnContainer {
-    width: 4rem;
-  }
   }
 </style>
