@@ -28,6 +28,14 @@ const routes = [
     component: () => import('../views/ConhecimentosView.vue'),
   },
   {
+    path: '/formacao',
+    name: 'formacao',
+    meta: {
+      title: `${ title } : Not Found`
+    },
+    component: () => import('../views/FormacaoView.vue'),
+  },
+  {
     path: '/404',
     name: 'notfound',
     meta: {

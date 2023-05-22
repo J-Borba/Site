@@ -3,8 +3,8 @@
     <nav class="navbar sticky-top">
       <div class="container-fluid">
         <div class="slideDownContainer justify-content-space-between me-4 ms-4">
-          <router-link to="/" class="baseThemeBtn">
-            <font-awesome-icon :icon="['fas', 'house']"/>
+          <router-link class="logoRouter" to="/">
+            <img src="@/assets/myLogoNoBg.png" class="logo" alt="">
           </router-link>
           <a>
             <button class="baseThemeBtn" id="lightBtn" @click="setTheme('light')" title="Trocar Tema">
@@ -14,27 +14,32 @@
               <font-awesome-icon :icon="['fas', 'toggle-on']" size="xl"/>
             </button>
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="baseThemeBtn">
-              <font-awesome-icon :icon="['fas', 'circle-chevron-down']"/>
-            </span>
-          </button>
+          <div class="navegacaoBtnContainer">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="baseThemeBtn">
+                <font-awesome-icon :icon="['fas', 'circle-chevron-down']"/>
+              </span>
+            </button>
+          </div>
         </div>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-dismiss="offcanvas">
           <div class="offcanvas-header">
+            <router-link to="/" class="baseThemeBtn">
+              <font-awesome-icon :icon="['fas', 'house']"/>
+            </router-link>
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navegação</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-space-between">
               <li class="nav-item">
-                <router-link to="/">
-                  Home
+                <router-link to="/experiencia">
+                  Experiência
                 </router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/experiencia">
-                  Experiência
+                <router-link to="/formacao">
+                  Formação Acadêmica
                 </router-link>
               </li>
               <li class="nav-item">
@@ -51,7 +56,9 @@
 </template>
 
 <script setup>
-  const setTheme = theme => document.documentElement.className = theme;
+  const setTheme = (theme) => {
+    document.documentElement.className = theme;
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -65,11 +72,14 @@
       }
       &.router-link-exact-active {
         border-bottom-color: var(--secondary);
+        opacity: 1;
 
         &:hover {
-          opacity: 0.5;
           cursor: not-allowed;
         }
+      }
+      &:hover {
+        opacity: 0.5;
       }
     }
   }
@@ -93,5 +103,28 @@
     justify-content: space-between;
     
     animation: slideDown 1s forwards
+  }
+  .logo {
+    width: 6rem;
+  }
+  .logoRouter {
+    border: none;
+    &.router-link-exact-active:hover {
+      cursor: pointer;
+    }
+  }
+  .navegacaoBtnContainer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 6rem;
+  }
+  @media (max-width: 1168px) {
+    .logo {
+      width: 4rem;
+    }
+    .navegacaoBtnContainer {
+    width: 4rem;
+  }
   }
 </style>
