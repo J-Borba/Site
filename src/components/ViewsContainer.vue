@@ -29,7 +29,7 @@
   @media (max-width: 1168px) {
     div {
       width: 100%;
-      margin: 0 auto;
+      margin: 1rem auto;
       padding: 0;
     }
   }

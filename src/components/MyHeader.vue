@@ -113,9 +113,7 @@
       cursor: pointer;
     }
   }
-  .btn-close {
-    --bs-btn-close-color: var(--primary);
-  }
+
   @media (max-width: 1168px) {
     .logo {
       width: 4rem;
