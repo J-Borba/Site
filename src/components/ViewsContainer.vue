@@ -1,10 +1,8 @@
 <template>
-  <section>
     <div>
       <slot></slot>
   
     </div>
-  </section>
 </template>
 
 <script setup>
@@ -28,13 +26,6 @@
     scale: 0;
     animation: opacityUp 2s forwards, scaleUp 2s forwards;
   }
-  section {
-    display: flex;
-    height: 95svh;
-    justify-content: center;
-    align-items: center;
-  }
-
   @media (max-width: 1168px) {
     div {
       width: 100%;
