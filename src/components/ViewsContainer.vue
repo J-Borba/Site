@@ -1,0 +1,45 @@
+<template>
+  <section>
+    <div>
+      <slot></slot>
+  
+    </div>
+  </section>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 60%;
+    min-height: 80svh;
+    gap: 2rem;
+    padding: 0.875rem;
+    margin: 1.5rem auto;
+
+    opacity: 0;
+    scale: 0;
+    animation: opacityUp 2s forwards, scaleUp 2s forwards;
+  }
+  section {
+    display: flex;
+    height: 95svh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 1168px) {
+    div {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+</style>

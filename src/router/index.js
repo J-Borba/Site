@@ -31,7 +31,7 @@ const routes = [
     path: '/formacao',
     name: 'formacao',
     meta: {
-      title: `${ title } : Not Found`
+      title: `${ title } : Formação Acadêmica`
     },
     component: () => import('../views/FormacaoView.vue'),
   },

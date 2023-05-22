@@ -1,5 +1,5 @@
 <template>
-  <div class="viewsContainer">
+  <ViewsContainer>
     <div class="notFound">
       <span>4</span>
       <span>0</span>
@@ -9,10 +9,12 @@
       <h1>Ops, essa página não existe!</h1>
       <h3>Selecione uma das páginas pelo cabeçalho ou menu!</h3>
     </div>
-  </div>
+  </ViewsContainer>
 </template>
 
 <script setup>
+import ViewsContainer from '@/components/ViewsContainer.vue';
+
 </script>
 
 <style lang="scss" scoped>

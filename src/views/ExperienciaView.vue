@@ -1,5 +1,5 @@
 <template>
-  <div class="viewsContainer">
+  <ViewsContainer>
     <div class="title">
       <h2>Experiências Profissionais</h2>
     </div>
@@ -15,10 +15,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </ViewsContainer>
 </template>
 
 <script setup>
+import ViewsContainer from '@/components/ViewsContainer.vue';
+
   
   const jobs = [
     {
