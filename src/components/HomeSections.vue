@@ -185,5 +185,8 @@ import { onMounted } from 'vue';
         width: 90svw !important
       }
     }
+    .iconsWrapper {
+      flex-direction: column;
+    }
   }
 </style>
