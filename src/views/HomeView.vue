@@ -9,12 +9,14 @@
       <div class="aboutMe">
         <p>
           Estudante de Ciências da Computação na <strong>Universidade do Estado do Rio de Janeiro
-          (UERJ)</strong> e atualmente Analista de Sistemas com um sonho de me tornar
-          Desenvolvedor.
+          (UERJ)</strong> com um sonho de me tornar Desenvolvedor.
         </p>
         <p>
-          Desde que me deparei com esta área eu sou completamente apaixonado e tenho
+          Desde que me deparei com esta área, sou completamente apaixonado e tenho
           sede de conhecimento.
+        </p>
+        <p>
+          Amo desenvolver e vou dar meu máximo para tornar esta paixão em profissão!
         </p>
       </div>
       

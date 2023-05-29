@@ -1,14 +1,14 @@
 <template>
   <ViewsContainer>
     <div class="title">
-      <h2>Experiências Profissionais</h2>
+      <h4>Experiências Profissionais</h4>
     </div>
     <div class="jobDescContainer" :id="job.sigla" v-for="job in jobs" :key="job.id">
-      <h3>{{ job.empresa }}</h3>
+      <h5>{{ job.empresa }}</h5>
       <div class="experiencias" v-for="experiencia in job.experiencias" :key="experiencia.cargo">
         <div class="cargo-periodo">
-          <h4>{{ experiencia.cargo }}</h4>
-          <h4>{{ experiencia.periodo }}</h4>
+          <p>{{ experiencia.cargo }}</p>
+          <p>{{ experiencia.periodo }}</p>
         </div>
         <div class="desc">
           <p v-for="line in experiencia.descricao" :key="line">{{ line }}</p>
@@ -46,7 +46,7 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
         },
         {
           cargo: "Analista de Sistemas",
-          periodo: "mar/2023 - atual",
+          periodo: "fev/2023 - jun/2023",
           descricao: [
             'Todas as funções citadas acima como estagiário',
             'Desenvolvimento de ChatBot com TakeBlip',
@@ -61,23 +61,12 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
 </script>
 
 <style lang="scss" scoped>
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-size: 1rem;
-  }
-  h2 {
-    font-size: 1.5rem;
+  p {
+    margin-block-end: 0;
   }
   .cargo-periodo {
     color: var(--primary);
   }
-  p {
-    margin-block-end: 0;
-  }
-  p::before {
-    content: "• ";
-  }
-
   .title {
     margin: 0 auto;
   }
@@ -104,6 +93,9 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
     margin-top: 1rem;
 
     opacity: 0.8;
+    p::before {
+      content: "• ";
+    }
   }
   .experiencias {
     margin-top: 1rem;

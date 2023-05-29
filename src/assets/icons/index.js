@@ -10,6 +10,14 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { faHandPointDown } from '@fortawesome/free-regular-svg-icons'
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 import { faTurnUp } from '@fortawesome/free-solid-svg-icons'
+import { faJsSquare } from '@fortawesome/free-brands-svg-icons'
+import { faHtml5 } from '@fortawesome/free-brands-svg-icons'
+import { faSass } from '@fortawesome/free-brands-svg-icons'
+import { faVuejs } from '@fortawesome/free-brands-svg-icons'
+import { faReact } from '@fortawesome/free-brands-svg-icons'
+import { faJava } from '@fortawesome/free-brands-svg-icons'
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
+import { faGitAlt } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
   faGithub,
@@ -22,5 +30,13 @@ library.add(
   faHome,
   faHandPointDown,
   faCircleInfo,
-  faTurnUp
+  faTurnUp,
+  faJsSquare,
+  faHtml5,
+  faSass,
+  faVuejs,
+  faReact,
+  faJava,
+  faGithubSquare,
+  faGitAlt,
 )

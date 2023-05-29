@@ -38,11 +38,6 @@
                 </router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/formacao">
-                  Formação Acadêmica
-                </router-link>
-              </li>
-              <li class="nav-item">
                 <router-link to="/conhecimentos">
                   Conhecimentos
                 </router-link>
