@@ -54,8 +54,9 @@ import { onMounted } from 'vue'
 <style lang="scss" scoped>
   footer {
     display: flex;
-    width: 100%;
     justify-content: center;
+    
+    width: 100%;
   }
   p {
     line-height: 1.6;
@@ -63,19 +64,24 @@ import { onMounted } from 'vue'
   }
   .footerContent {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: 8svh;
-    background-color: var(--primary);
-    color: var(--footer-text);
-    padding: 0 2rem;
     position: sticky;
     bottom: 0;
-    transform: translateX(-300%);
-    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    
+    width: fit-content;
+    height: 8svh;
+
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    
+    padding: 0 2rem;
+
+    background-color: var(--primary);
+    color: var(--footer-text) !important;
+
+    transform: translateX(-300%);
+    opacity: 0;
   }
   .footerContent.appear {
     animation: slide 2s forwards, opacityUp 2s forwards;
@@ -85,9 +91,12 @@ import { onMounted } from 'vue'
     gap: 1rem;
 
     a {
-      transition: transform 1.5s;
-      border: 0;
+      color: var(--footer-text);
       cursor: pointer;
+      border: 0;
+
+
+      transition: transform 1.5s;
     }
     a:hover {
       transform: translateY(-15%);

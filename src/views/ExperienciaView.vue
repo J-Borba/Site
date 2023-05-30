@@ -72,11 +72,12 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
   }
   .jobDescContainer {
     color: var(--text);
-    border: 5px dotted var(--primary);
-    border-left: none;
-    border-right: none;
     padding: 1rem;
     margin-bottom: 5%;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid var(--primary);
+    }
   }
   .cargo-periodo {
     display: flex;

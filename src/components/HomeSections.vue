@@ -37,7 +37,6 @@
       </div>
     </section>
 
-    
     <section class="slideIn section-2">
       <div class="formacao-grid">
         <div class="title-formacao-grid-container flexbox-col-center-aligned">
@@ -66,7 +65,6 @@
         </div>     
       </div>
     </section>
-
 
     <section class="slideIn section-3">
       <div class="skills-grid">

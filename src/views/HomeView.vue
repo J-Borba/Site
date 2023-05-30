@@ -54,7 +54,7 @@
     justify-content: center;
     margin-top: 4rem;
   }
-  @media (max-width: 1168px) {
+  @media only screen and (max-width: 1168px) {
     .introSections {
       margin-top: 0;
       font-size: 0.675rem;

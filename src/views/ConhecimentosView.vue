@@ -46,11 +46,16 @@ const skills = [
     margin-block-end: 0;
   }
   .title {
-    margin: 0 auto;
+    margin: 0;
   }
   .skillDescContainer {
     color: var(--text);
-    width: 30svw;
+    width: 90%;
+    
+    &:not(:last-child) {
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--primary);
+    }
   }
   .desc {
     display: flex;
