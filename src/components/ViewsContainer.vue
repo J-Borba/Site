@@ -28,7 +28,7 @@
   }
   @media (max-width: 1168px) {
     div {
-      width: 100%;
+      width: 90%;
       margin: 1rem auto;
       padding: 0;
     }
