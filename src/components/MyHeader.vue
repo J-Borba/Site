@@ -3,14 +3,8 @@
     <nav class="navbar sticky-top">
       <div class="container-fluid">
         <div class="slideDownContainer justify-content-space-between me-4 ms-4">
-          <a>
-            <button class="baseThemeBtn" id="lightBtn" @click="setTheme('light')" title="Trocar Tema">
-              <font-awesome-icon :icon="['fas', 'toggle-off']" size="xl"/>
-            </button>
-            <button class="baseThemeBtn" id="darkBtn" @click="setTheme('dark')" title="Trocar Tema">
-              <font-awesome-icon :icon="['fas', 'toggle-on']" size="xl"/>
-            </button>
-          </a>
+          <div class="blankdiv" style="width:1.2rem">
+          </div>
           <router-link class="logoRouter" to="/">
             <img src="@/assets/myLogoNoBg.png" class="logo" alt="">
           </router-link>
@@ -51,9 +45,6 @@
 </template>
 
 <script setup>
-  const setTheme = (theme) => {
-    document.documentElement.className = theme;
-  }
 </script>
 
 <style lang="scss" scoped>
