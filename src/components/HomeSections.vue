@@ -139,7 +139,7 @@ import { onMounted } from 'vue';
 <style lang="scss" scoped>
   section {
     display: flex;
-    height: 100svh;
+    height: 80svh;
     justify-content: center;
     align-items: center;
   }
