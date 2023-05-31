@@ -16,20 +16,20 @@
     align-items: center;
     justify-content: center;
     
-    width: 60%;
-    min-height: 100svh;
-    gap: 2rem;
-    padding: 0.875rem;
-    margin: 1.5rem auto;
+    width: 60svw;
+    min-height: 90svh;
+
+    padding: 0 0.875rem;
+    margin: 0 auto;
 
     opacity: 0;
     scale: 0;
     animation: opacityUp 2s forwards, scaleUp 2s forwards;
   }
-  @media (max-width: 1168px) {
+  @media only screen and (max-width: 1168px) {
     div {
-      width: 90%;
-      margin: 1rem auto;
+      width: 90svw;
+      margin: 0.750rem auto;
       padding: 0;
     }
   }

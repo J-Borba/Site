@@ -75,12 +75,8 @@
       }
     }
   }
-  @media (max-width: 1168px) {
-    .viewsContainer {
-      width: 90%;
-
-    }
-    :root {
+  @media only screen and (max-width: 1168px) {
+    *{
       font-size: 0.875rem;
     }
   }

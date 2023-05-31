@@ -161,8 +161,8 @@ import { onMounted } from 'vue';
   }
   .maps {
     border-radius: 8px;
-    width: 600px;
-    height: 300px !important;
+    width: 40rem;
+    height: 15rem;
   }
   .flexbox-col-center-aligned {
     display: flex;
@@ -221,7 +221,7 @@ import { onMounted } from 'vue';
   }
   .skills-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-items: center;
 
     grid-template-areas: 
@@ -235,7 +235,7 @@ import { onMounted } from 'vue';
     .icon-skills-grid-container {
       .skillsIcon {
         color: var(--primary);
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
       &:nth-child(2) {
         grid-area: js;
@@ -292,9 +292,13 @@ import { onMounted } from 'vue';
         "js html sass vue"
         "react java git github"
         "desc desc desc desc";
+
+        .skillsIcon {
+          font-size: 2rem !important;
+        }
     }
     .maps {
-      width: 300px;
+      width: 80svw;
     }
   }
 </style>

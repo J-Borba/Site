@@ -1,28 +1,34 @@
 <template>
   <HomeSections>
     <ViewsContainer >
-      <div class="profileContainer">
-        <img src="@/assets/MyFoto-Circle.png" alt="">
-        <h1>João Victor Borba</h1>
-      </div>
+      <div class="about-grid">
+        <div class="profile-grid">
+          <div class="img-container">
+            <a href="https://www.linkedin.com/in/joao-borba27/" target="_blank">
+              <img src="@/assets/MyFoto-Circle.png" alt="">
+            </a>
+          </div>
+          <h1>João Victor Borba</h1>
+        </div>
+        
+        <div class="about-text-grid-container">
+          <p>
+            Estudante de Ciências da Computação na <strong>Universidade do Estado do Rio de Janeiro
+            (UERJ)</strong> com um sonho de me tornar Desenvolvedor.
+          </p>
+          <p>
+            Desde que me deparei com esta área, sou completamente apaixonado e tenho
+            sede de conhecimento.
+          </p>
+          <p>
+            Amo desenvolver e vou dar meu máximo para tornar esta paixão em profissão!
+          </p>
+        </div>
 
-      <div class="aboutMe">
-        <p>
-          Estudante de Ciências da Computação na <strong>Universidade do Estado do Rio de Janeiro
-          (UERJ)</strong> com um sonho de me tornar Desenvolvedor.
-        </p>
-        <p>
-          Desde que me deparei com esta área, sou completamente apaixonado e tenho
-          sede de conhecimento.
-        </p>
-        <p>
-          Amo desenvolver e vou dar meu máximo para tornar esta paixão em profissão!
-        </p>
-      </div>
-      
-      <div class="introSections">
-        <h4>Mais sobre mim</h4>
-        <font-awesome-icon :icon="['far', 'hand-point-down']" bounce size="2xl" style="color: var(--primary)"/>
+        <div class="more-icon-grid-container">
+          <h4>Mais sobre mim</h4>
+          <font-awesome-icon :icon="['far', 'hand-point-down']" bounce size="2xl" style="color: var(--primary)"/>
+        </div>
       </div>
     </ViewsContainer>
   </HomeSections>
@@ -34,30 +40,93 @@
 </script>
 
 <style lang="scss" scoped>
-  img {
-    width: 10rem;
-    border-radius: 50%;
+  a {
+    opacity: 1 !important;
   }
-  .profileContainer {
+  .img-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 2rem;
-  }
-  .aboutMe {
-    padding: 10px;
-    line-height: 1.6;
-  }
-  .introSections {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    margin-top: 4rem;
+
+    position: relative;
+    
+    width: 10.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    padding: 0.275rem;
+
+    overflow: hidden;
+    &::before {
+      content: '';
+      
+      position: absolute;
+      z-index: -1;
+      inset: -10px 40px;
+      background: linear-gradient(315deg, var(--secondary), var(--primary));
+      
+      transition: 0.5s;
+      animation: spin 4s linear infinite
+    }
+    &:hover::before {
+      inset: -10px 0;
+    }
+    img {
+      width: 10.5rem;
+    }
   }
-  @media only screen and (max-width: 1168px) {
-    .introSections {
-      margin-top: 0;
-      font-size: 0.675rem;
+  .about-grid {
+    display: grid;
+    gap: 2rem;
+
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+    .about-text-grid-container {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+  }
+  .profile-grid {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+
+    grid-template-areas: 
+      "foto nome";
+    img {
+      width: 10rem;
+      border-radius: 50%;
+      grid-area: foto;
+    }
+    h1 {
+      grid-area: nome;
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .profile-grid {
+      grid-template-areas: 
+        "foto"
+        "nome";
+    }
+    .img-container {
+      width: 7rem;
+      img {
+        width: 6.5rem;
+      }
+      &::before {
+        inset: -10px 20px;
+      }
     }
   }
 </style>

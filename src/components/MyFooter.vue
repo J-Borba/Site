@@ -70,7 +70,7 @@ import { onMounted } from 'vue'
     align-items: center;
     
     width: fit-content;
-    height: 8svh;
+    height: 4rem;
 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -88,7 +88,7 @@ import { onMounted } from 'vue'
   }
   .iconsWrapper {
     display: flex;
-    gap: 1rem;
+    gap: 0.875rem;
 
     a {
       color: var(--footer-text);
@@ -106,6 +106,12 @@ import { onMounted } from 'vue'
   @media (max-width: 1168px) {
     .footerContent {
       transform: translateX(-40%);
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .footerContent {
+      height: 2.5rem;
+      padding: 0 1rem;
     }
   }
 </style>
