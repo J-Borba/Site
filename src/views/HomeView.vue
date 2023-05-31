@@ -65,10 +65,11 @@
       inset: -10px 40px;
       background: linear-gradient(315deg, var(--secondary), var(--primary));
       
-      transition: 0.5s;
-      animation: spin 4s linear infinite
+      transition: 1s;
+      animation: spin 10s linear infinite
     }
     &:hover::before {
+      transition: 300ms;
       inset: -10px 0;
     }
     img {
