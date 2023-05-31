@@ -1,5 +1,5 @@
 <template>
-    <a href="https://shorturl.at/kvzU1" target="_blank" class="whatsapp-button-container">
+    <a href="https://wa.me/message/URFTSO4RH2ZQF1" target="_blank" class="whatsapp-button-container">
       <font-awesome-icon :icon="['fab', 'whatsapp']"/>
     </a>
 </template>
