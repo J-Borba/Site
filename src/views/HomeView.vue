@@ -93,8 +93,8 @@
   .profile-grid {
     display: grid;
     align-items: center;
+    justify-items: center;
     gap: 1.5rem;
-
     grid-template-areas: 
       "foto nome";
     img {

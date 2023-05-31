@@ -18,6 +18,7 @@ import { faReact } from '@fortawesome/free-brands-svg-icons'
 import { faJava } from '@fortawesome/free-brands-svg-icons'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 import { faGitAlt } from '@fortawesome/free-brands-svg-icons'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
   faGithub,
@@ -39,4 +40,5 @@ library.add(
   faJava,
   faGithubSquare,
   faGitAlt,
+  faWhatsapp
 )
