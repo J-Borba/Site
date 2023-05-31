@@ -1,5 +1,5 @@
 <template>
-    <a href="https://wa.me/message/URFTSO4RH2ZQF1" target="_blank" class="whatsapp-button-container">
+    <a href="https://wa.me/message/URFTSO4RH2ZQF1" target="_blank" class="whatsapp-button">
       <font-awesome-icon :icon="['fab', 'whatsapp']"/>
     </a>
 </template>
@@ -9,7 +9,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .whatsapp-button-container {
+  .whatsapp-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,10 @@
     animation: 
       whatsapp-button-animation-pulse 1.5s ease-out infinite,
       whatsapp-button-animation-scale-up 2s ease-in-out forwards;
+
+      svg {
+        font-size: 2rem !important;
+      }
   }
   @keyframes whatsapp-button-animation-pulse {
     0% {

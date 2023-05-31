@@ -268,7 +268,7 @@ import { onMounted } from 'vue';
     }
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1168px) {
     .experiencia-grid {
       grid-template-columns: 100%;
       grid-template-areas:
