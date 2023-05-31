@@ -88,6 +88,7 @@
       display: flex;
       flex-direction: column;
       width: 80%;
+      text-align: start;
     }
   }
   .profile-grid {
