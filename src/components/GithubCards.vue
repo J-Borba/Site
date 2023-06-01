@@ -33,7 +33,7 @@
   const repos = ref([])
 
   async function getRepos() {
-    const response = await api.get('/repos')
+    const response = await api.get('/repos?sort=asc')
 
     if (response) {
       repos.value = JSON.parse(response.request.response)
@@ -53,6 +53,7 @@
   $java-clr: #b07219;
   $border-clr: #d0d7de;
   $book-icon-clr: #768390;
+  $card-bg-clr:#22272e;
 
   #Vue {
     &::before {
@@ -83,28 +84,22 @@
   }
   .github-card {
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
+    
     width: 15rem;
-  }
-  .github-card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    box-sizing: border-box;
-    flex: 1;
-
+    height: 100%;
     padding: 1rem;
-
-    border: 1px solid $border-clr;
-    border-radius: 8px;
-
     font-size: 0.8rem;
+
+    border-radius: 8px;
+    border: 1px solid $border-clr;
+
+    background-color: $card-bg-clr;
   }
   .title {
     span {
       font-size: 1.3rem;
       color: $title-clr;
+      font-weight: 400;
       &:hover {
         text-decoration: underline;
       }
@@ -125,8 +120,14 @@
     align-items: center;
     gap: 0.5rem;
   }
+  .desc {
+    margin: 0.5rem auto;
+  }
   p {
     margin-block-end: 0;
+  }
+  a:hover {
+    opacity: 1 !important;
   }
   @media only screen and (max-width: 1168px) {
     * {
