@@ -80,11 +80,10 @@ import { onMounted } from 'vue'
     background-color: var(--primary);
     color: var(--footer-text) !important;
 
-    transform: translateX(-300%);
     opacity: 0;
   }
   .footerContent.appear {
-    animation: slide 2s forwards, opacityUp 2s forwards;
+    animation: opacityUp 3s forwards;
   }
   .iconsWrapper {
     display: flex;
@@ -94,7 +93,6 @@ import { onMounted } from 'vue'
       color: var(--footer-text);
       cursor: pointer;
       border: 0;
-
 
       transition: transform 1.5s;
     }
