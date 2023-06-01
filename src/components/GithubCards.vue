@@ -37,7 +37,6 @@
 
     if (response) {
       repos.value = JSON.parse(response.request.response)
-      console.log(repos.value);
     }
   }
   onMounted(() => {
