@@ -104,12 +104,19 @@
         </div>
       </div>
     </section>
-</main>
+
+    <section class="slideIn section-4">
+      <h2>Projetos</h2>
+      <GithubCards />
+    </section>
+  </main>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-  onMounted(() => {
+  import { onMounted } from 'vue';
+  import GithubCards from './GithubCards.vue';
+
+  onMounted(() => { 
     const sliders = document.querySelectorAll('.slideIn')
 
     const appearOptions = {
@@ -139,9 +146,12 @@ import { onMounted } from 'vue';
 <style lang="scss" scoped>
   section {
     display: flex;
-    height: 80svh;
+    min-height: 80svh;
     justify-content: center;
     align-items: center;
+  }
+  .section-4 {
+    flex-direction: column;
   }
   h2,
   p {
