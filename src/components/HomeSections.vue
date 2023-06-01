@@ -163,7 +163,7 @@
   .slideIn {
     opacity: 0;
     transform: translateX(-30%);
-    transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+    transition: opacity 1s ease-in, transform 1s ease-out;
   }
   .slideIn.appear {
     opacity: 1;
