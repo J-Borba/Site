@@ -51,7 +51,7 @@
   $ts-clr: #3178c6;
   $js-clr: #f1e05a;
   $java-clr: #b07219;
-  $border-clr: #d0d7de;
+  $border-clr: #b4bac0;
   $book-icon-clr: #768390;
   $card-bg-clr:#22272e;
 
@@ -97,7 +97,7 @@
   }
   .title {
     span {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: $title-clr;
       font-weight: 400;
       &:hover {
@@ -136,6 +136,11 @@
     .github-card-grid {
       grid-template-columns: repeat(1, 1fr);
       margin-bottom: 2rem;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .github-card {
+      background-color: whitesmoke;
     }
   }
 </style>

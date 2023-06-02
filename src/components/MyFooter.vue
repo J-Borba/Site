@@ -3,16 +3,16 @@
     <div class="footerContent">
       <div class="iconsWrapper">
         <a @click="handleClickFooter">
-          <font-awesome-icon :icon="['fas', 'turn-up']" size="lg" style="color: var(--secondary)"/>
+          <font-awesome-icon class="footer-icon" :icon="['fas', 'turn-up']" size="lg" style="color: var(--secondary)"/>
         </a>
         <a href="https://github.com/J-Borba" target="_blank">
-          <font-awesome-icon :icon="['fab', 'github']" size="xl"/>
+          <font-awesome-icon class="footer-icon" :icon="['fab', 'github']" size="xl"/>
         </a>
         <a href="mailto:joao3borba3@gmail.com" target="_blank">
-          <font-awesome-icon :icon="['far', 'envelope']" size="xl"/>
+          <font-awesome-icon class="footer-icon" :icon="['far', 'envelope']" size="xl"/>
         </a>
         <a href="https://www.linkedin.com/in/joao-borba27/" target="_blank">
-          <font-awesome-icon :icon="['fab', 'linkedin']" size="xl"/>
+          <font-awesome-icon class="footer-icon" :icon="['fab', 'linkedin']" size="xl"/>
         </a>
       </div>
     </div>
@@ -85,6 +85,9 @@ import { onMounted } from 'vue'
   .footerContent.appear {
     animation: opacityUp 3s forwards;
   }
+  .footer-icon {
+    font-size: 1.5rem !important;
+  }
   .iconsWrapper {
     display: flex;
     gap: 0.875rem;
@@ -101,15 +104,10 @@ import { onMounted } from 'vue'
       transition: transform 150ms;
     }
   }
-  @media (max-width: 1168px) {
-    .footerContent {
-      transform: translateX(-40%);
-    }
-  }
   @media only screen and (max-width: 800px) {
     .footerContent {
-      height: 2.5rem;
-      padding: 0 1rem;
+      height: 3.8rem;
+      padding: 0 2rem;
     }
   }
 </style>
