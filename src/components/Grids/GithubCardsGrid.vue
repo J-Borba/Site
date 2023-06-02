@@ -1,4 +1,5 @@
 <template>
+  <h2>Projetos</h2>
   <div class="github-card-grid">
     <div class="github-card" v-for="repo in repos" :key="repo.id">
       <div class="github-card-content">
