@@ -23,8 +23,7 @@
     margin: 0 auto;
 
     opacity: 0;
-    scale: 0;
-    animation: opacityUp 2s forwards, scaleUp 2s forwards;
+    animation: opacityUp 2.5s forwards;
   }
   @media only screen and (max-width: 1168px) {
     div {
