@@ -7,16 +7,15 @@
     </div>
     
     <div class="vaga-experiencia-grid-container flexbox-col-center-aligned">
-      <h5>Associação Brasileira Beneficente de Reabilitação</h5>
-      <p class="paragraph" >Analista de Sistemas</p>
-      <p class="paragraph" >mar/2022 - jun/2023</p>
+      <h5>TIPLAN</h5>
+      <p class="paragraph" >Desenvolvedor de Software</p>
+      <p class="paragraph" >Out/2023 - Atualmente</p>
     </div>
 
     <div class="maps-experiencia-grid-container">
       <iframe
         class="maps"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.6188111481233!2d-43.220514285033204!3d-22.964261584982655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd59ea959a3a3%3A0x7429ede8067295be!2sABBR!5e0!3m2!1spt-BR!2sbr!4v1684791000938!5m2!1spt-BR!2sbr" 
-        width="600"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3468.95989963365!2d-43.18144200464534!3d-22.904709338182126!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5fdc3e9565%3A0xe09773af0e23b78e!2sTIPLAN!5e0!3m2!1spt-BR!2sbr!4v1696688192919!5m2!1spt-BR!2sbr"        width="600"
         height="300"
         style="border:0;"
         loading="lazy"
@@ -25,7 +24,7 @@
     </div>
     <div class="desc-experiencia-grid-container flexbox-col-center-aligned">
       <h5>Descrição da vaga</h5>
-      <router-link to="experiencia#ABBR">
+      <router-link to="experiencia#TIPLAN">
         <font-awesome-icon :icon="['fas', 'circle-info']" size="xl" style="color: var(--secondary)" />
       </router-link>
     </div>

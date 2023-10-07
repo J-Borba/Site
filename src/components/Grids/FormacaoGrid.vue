@@ -21,7 +21,7 @@
     </div>
     <div class="desc-formacao-grid-container flexbox-col-center-aligned">
       <p class="paragraph">Ciências da Computação</p>
-      <p class="paragraph">fev/2021 - cursando</p>
+      <p class="paragraph">Fev/2021 - Atualmente</p>
     </div>     
   </div>
 </template>

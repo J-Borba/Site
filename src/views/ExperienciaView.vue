@@ -4,7 +4,7 @@
       <h4>Experiências Profissionais</h4>
     </div>
     <div class="jobDescContainer" :id="job.sigla" v-for="job in jobs" :key="job.id">
-      <h5>{{ job.empresa }}</h5>
+      <h5 class="nomeEmpresa">{{ job.empresa }}</h5>
       <div class="experiencias" v-for="experiencia in job.experiencias" :key="experiencia.cargo">
         <div class="cargo-periodo">
           <p>{{ experiencia.cargo }}</p>
@@ -14,6 +14,7 @@
           <p v-for="line in experiencia.descricao" :key="line">{{ line }}</p>
         </div>
       </div>
+      <div class="line" v-if="jobs.length > 1"></div>
     </div>
   </ViewsContainer>
 </template>
@@ -21,7 +22,6 @@
 <script setup>
 import ViewsContainer from '@/components/ViewsContainer.vue';
 
-  
   const jobs = [
     {
       id: 1,
@@ -29,8 +29,8 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
       sigla: 'ABBR',
       experiencias: [
         {
-          cargo: "Estagiário",
-          periodo: "mar/2022 - fev/2023",
+          cargo: "Estagiário - Analista",
+          periodo: "Mar/2022 - Fev/2023",
           descricao: [
             'Suporte ao cliente',
             'Infraestrutura de TI',
@@ -46,7 +46,7 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
         },
         {
           cargo: "Analista de Sistemas",
-          periodo: "fev/2023 - jun/2023",
+          periodo: "Fev/2023 - Jun/2023",
           descricao: [
             'Todas as funções citadas acima como estagiário',
             'Desenvolvimento de ChatBot com TakeBlip',
@@ -55,7 +55,22 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
           ]
         },
       ]
-    }
+    },
+    {
+      id: 2,
+      empresa: "TIPLAN",
+      sigla: 'TIPLAN',
+      experiencias: [
+        {
+          cargo: "Estagiário - Desenvolvimento",
+          periodo: "Out/2023 - Atualmente",
+          descricao: [
+            '.NET C#',
+            'Vue.js 2',
+          ]
+        },
+      ]
+    },
   ]
 
 </script>
@@ -68,16 +83,21 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
     color: var(--primary);
   }
   .title {
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
   }
   .jobDescContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 40rem;
     color: var(--text);
     padding: 1rem;
     margin-bottom: 5%;
 
-    &:not(:last-child) {
-      border-bottom: 2px solid var(--primary);
-    }
+  }
+  .nomeEmpresa {
+    border-bottom: 1px solid var(--primary);
+    display: flex;
+    width: fit-content;
   }
   .cargo-periodo {
     display: flex;
@@ -100,5 +120,12 @@ import ViewsContainer from '@/components/ViewsContainer.vue';
   }
   .experiencias {
     margin-top: 1rem;
+  }
+  .line {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary);
+    margin-top: 2rem;
   }
 </style>

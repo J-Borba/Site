@@ -49,6 +49,7 @@ const skills = [
     margin: 0;
   }
   .skillDescContainer {
+    margin-top: 1rem;
     color: var(--text);
     width: 90%;
     
