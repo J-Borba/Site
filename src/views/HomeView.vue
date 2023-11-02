@@ -1,8 +1,8 @@
 <template>
   <HomeSections>
-    <ViewsContainer >
-      <div class="about-grid">
-        <div class="profile-grid">
+    <ViewsContainer>
+      <div class="about-container">
+        <div class="profile-container">
           <div class="img-container">
             <a href="https://www.linkedin.com/in/joao-borba27/" target="_blank">
               <img src="@/assets/MyFoto-Circle.png" alt="">
@@ -14,14 +14,13 @@
         <div class="about-text-grid-container">
           <p>
             Estudante de Ciências da Computação na <strong>Universidade do Estado do Rio de Janeiro
-            (UERJ)</strong> com um sonho de me tornar Desenvolvedor.
+            (UERJ)</strong>
           </p>
           <p>
-            Desde que me deparei com esta área, sou completamente apaixonado e tenho
-            sede de conhecimento.
+            Desenvolvedor na <a href="https://www.tiplan.com.br/" target="_blank">TIPLAN</a>
           </p>
           <p>
-            Amo desenvolver e vou dar meu máximo para tornar esta paixão em profissão!
+            Amo desenvolver e busco mais conhecimento a cada dia
           </p>
         </div>
 
@@ -40,7 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
-  a {
+  a{
     opacity: 1 !important;
   }
   .img-container {
@@ -53,8 +52,6 @@
     width: 10.5rem;
     aspect-ratio: 1;
     border-radius: 50%;
-
-    padding: 0.275rem;
 
     overflow: hidden;
     &::before {
@@ -76,35 +73,37 @@
       width: 10.5rem;
     }
   }
-  .about-grid {
-    display: grid;
-    gap: 2rem;
-
-    justify-items: center;
+  .about-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 
+    gap: 2rem;
     .about-text-grid-container {
       display: flex;
       flex-direction: column;
       width: 80%;
       text-align: start;
+      
+      a {
+        color: var(--primary);
+        &:hover {
+          opacity: 0.5;
+          color: var(--secondary);
+        }
+      }
     }
   }
-  .profile-grid {
-    display: grid;
+  .profile-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
     gap: 1.5rem;
-    grid-template-areas: 
-      "foto nome";
+
     img {
       width: 10rem;
       border-radius: 50%;
-      grid-area: foto;
-    }
-    h1 {
-      grid-area: nome;
     }
   }
   @keyframes spin {
@@ -116,11 +115,6 @@
     }
   }
   @media only screen and (max-width: 800px) {
-    .profile-grid {
-      grid-template-areas: 
-        "foto"
-        "nome";
-    }
     .img-container {
       width: 7rem;
       img {

@@ -34,7 +34,7 @@
   const repos = ref([])
 
   async function getRepos() {
-    const response = await api.get('/repos?sort=asc')
+    const response = await api.get('/repos?sort=updated')
 
     if (response) {
       repos.value = JSON.parse(response.request.response)
@@ -52,9 +52,9 @@
   $ts-clr: #3178c6;
   $js-clr: #f1e05a;
   $java-clr: #b07219;
+  $csharp-clr: #178600;
   $border-clr: #b4bac0;
   $book-icon-clr: #768390;
-  $card-bg-clr:#22272e;
 
   #Vue {
     &::before {
@@ -76,6 +76,11 @@
       color: $java-clr;
     }
   }
+  #C\# {
+    &::before {
+      color: $csharp-clr;
+    }
+  }
   .github-card-grid {
     display: grid;
     gap: 1.5rem;
@@ -84,17 +89,27 @@
     grid-template-columns: repeat(3, 1fr);
   }
   .github-card {
-    display: flex;
-    
-    width: 15rem;
-    height: 100%;
-    padding: 1rem;
-    font-size: 0.8rem;
+
+    padding: 0.5rem;
+    width: 17rem;
+    height: 8rem;
 
     border-radius: 8px;
     border: 1px solid $border-clr;
 
-    background-color: $card-bg-clr;
+    box-shadow: 1px 1px 8px 1px var(--primary);
+  }
+  .github-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 100%;
+    line-height: 1;
+    p{
+      width: 100%;
+      font-size: 0.9rem;
+    }
   }
   .title {
     span {
@@ -137,11 +152,6 @@
     .github-card-grid {
       grid-template-columns: repeat(1, 1fr);
       margin-bottom: 2rem;
-    }
-  }
-  @media (prefers-color-scheme: light) {
-    .github-card {
-      background-color: whitesmoke;
     }
   }
 </style>
