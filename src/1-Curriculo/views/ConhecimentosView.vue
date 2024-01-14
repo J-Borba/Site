@@ -13,7 +13,8 @@
 </template>
 
 <script setup>
-import ViewsContainer from '@/components/ViewsContainer.vue';
+  import ViewsContainer from '../components/ViewsContainer.vue';
+  import '../style/global.scss'
 
 const skills = [
     {

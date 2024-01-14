@@ -6,10 +6,7 @@
 </template>
 
 <script setup>
-  import MyHeader from './components/MyHeader.vue';
-  import MyFooter from './components/MyFooter.vue';
-import WhatsappBtn from './components/WhatsappBtn.vue';
+  import MyHeader from './0-Global/components/MyHeader.vue';
+  import MyFooter from './0-Global/components/MyFooter.vue';
+  import WhatsappBtn from './0-Global/components/WhatsappBtn.vue';
 </script>
-
-<style lang="scss">
-</style>

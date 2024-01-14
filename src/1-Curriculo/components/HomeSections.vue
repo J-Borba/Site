@@ -22,10 +22,11 @@
 
 <script setup>
   import { onMounted } from 'vue';
-  import GithubCardsGrid from './Grids/GithubCardsGrid.vue';
-  import ExperienciaGrid from '@/components/Grids/ExperienciaGrid.vue'
-  import FormacaoGrid from '@/components/Grids/FormacaoGrid.vue'
-  import SkillsGrid from '@/components/Grids/SkillsGrid.vue'
+  import '../style/global.scss'
+  import GithubCardsGrid from '../components/Grids/GithubCardsGrid.vue';
+  import ExperienciaGrid from '../components/Grids/ExperienciaGrid.vue'
+  import FormacaoGrid from '../components/Grids/FormacaoGrid.vue'
+  import SkillsGrid from '../components/Grids/SkillsGrid.vue'
 
   onMounted(() => { 
     const sliders = document.querySelectorAll('.slideIn')
@@ -54,28 +55,11 @@
   })
 </script>
 
-<style lang="scss">
-  section {
-    display: flex;
-    min-height: 80svh;
-    justify-content: center;
-    align-items: center;
-  }
+<style lang="scss" scoped>
   .section-4 {
     flex-direction: column;
   }
-  h2,
-  .paragraph {
-    color: var(--primary);
-    margin: 0;
-    margin-block-end: 0;
-    font-weight: bold;
-  }
-  .maps {
-    border-radius: 8px;
-    width: 40rem;
-    height: 15rem;
-  }
+
   .slideIn {
     opacity: 0;
     transform: translateX(-30%);
@@ -84,18 +68,5 @@
   .slideIn.appear {
     opacity: 1;
     transform: translateX(0);
-  }
-  .flexbox-col-center-aligned {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-  }  
-
-  @media only screen and (max-width: 1168px) {
-    .maps {
-      width: 80svw;
-    }
   }
 </style>

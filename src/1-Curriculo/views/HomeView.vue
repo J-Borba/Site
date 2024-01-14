@@ -5,7 +5,7 @@
         <div class="profile-container">
           <div class="img-container">
             <a href="https://www.linkedin.com/in/joao-borba27/" target="_blank">
-              <img src="@/assets/MyFoto-Circle.png" alt="">
+              <img src="@/0-Global/assets/MyFotoCircle.png" alt="">
             </a>
           </div>
           <h1>João Victor Borba</h1>
@@ -34,8 +34,9 @@
 </template>
 
 <script setup>
-  import ViewsContainer from '@/components/ViewsContainer.vue';
-  import HomeSections from '@/components/HomeSections.vue';
+  import ViewsContainer from '../components/ViewsContainer.vue';
+  import HomeSections from '../components/HomeSections.vue';
+  import '../style/global.scss'
 </script>
 
 <style lang="scss" scoped>
