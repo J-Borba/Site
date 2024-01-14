@@ -26,30 +26,7 @@
   </div>
 </template>
 
-<script setup>
-import '../../style/global.scss'
-</script>
-
 <style lang="scss" scoped>
-h2,
-  .paragraph {
-    color: var(--primary);
-    margin: 0;
-    margin-block-end: 0;
-    font-weight: bold;
-  }
-  .maps {
-    border-radius: 8px;
-    width: 40rem;
-    height: 15rem;
-  }
-  .flexbox-col-center-aligned {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-  }  
 .formacao-grid {
     display: grid;
     gap: 1.5rem;
@@ -82,9 +59,6 @@ h2,
         "universidade"
         "desc"
         "maps";
-    }
-    .maps {
-      width: 80svw;
     }
   }
 </style>

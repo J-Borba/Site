@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import ViewsContainer from '../../1-Curriculo/components/ViewsContainer.vue';
+import ViewsContainer from '@/components/ViewsContainer.vue';
 
 </script>
 

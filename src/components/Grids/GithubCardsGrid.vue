@@ -28,9 +28,8 @@
 </template>
 
 <script setup>
-  import '../../style/global.scss'
   import { onMounted, ref } from 'vue';
-  import api from '@/0-Global/services/api.js'
+  import api from '@/services/api'
 
   const repos = ref([])
 
@@ -81,12 +80,6 @@
     &::before {
       color: $csharp-clr;
     }
-  }
-  h2 {
-    color: var(--primary);
-    margin: 0;
-    margin-block-end: 0;
-    font-weight: bold;
   }
   .github-card-grid {
     display: grid;

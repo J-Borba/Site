@@ -20,9 +20,35 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
   function handleClickFooter() {
     document.documentElement.scrollTop = 0;
   }
+  onMounted(() => {
+    const sliders = document.querySelectorAll('.footerContent')
+
+    const appearOptions = {
+      threshold: 0.9,
+    }
+
+    const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+      
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        else {
+          entry.target.classList.add('appear');
+          appearOnScroll.unobserve(entry.target);
+        }
+      })
+      
+    }, appearOptions);
+
+    sliders.forEach((slider) => {
+      appearOnScroll.observe(slider);
+    })
+  })
 </script>
 
 <style lang="scss" scoped>
@@ -43,17 +69,21 @@
     justify-content: center;
     align-items: center;
     
-    width: 50svw;
+    width: fit-content;
     height: 4rem;
 
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     
     padding: 0 2rem;
 
     background-color: var(--primary);
     color: var(--footer-text) !important;
 
+    opacity: 0;
+  }
+  .footerContent.appear {
+    animation: opacityUp 3s forwards;
   }
   .footer-icon {
     font-size: 1.5rem !important;

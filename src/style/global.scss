@@ -1,0 +1,112 @@
+:root {
+  // Setando cores dos temas
+  color-scheme: dark light;
+  --footer-text: #d7d7d7;
+  @media (prefers-color-scheme: light) {
+    --bg: #e3e1e1;
+    --primary: #29A19C;
+    --primary-low-opacity: #29a19d80;
+    --primary-no-opacity: #29a19d00;
+    --secondary: #1c6d6b;
+    --text: #36524b;
+  }
+  @media (prefers-color-scheme: dark) {
+    --bg: #1f2327;
+    --primary: #29A19C;
+    --primary-low-opacity: #29a19d80;
+    --primary-no-opacity: #29a19d00;
+    --secondary: #56f4d2;
+    --text: #d7d7d7;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 30px;
+  }
+  a:focus, span:focus, button:focus {
+    outline: none;
+    opacity: 0.7;
+    box-shadow: none;
+  }
+  .baseThemeBtn {
+    background-color: transparent;
+    color: var(--primary);
+    border: none;
+    line-height: 0;
+    // cursor: pointer;
+
+    transition: 0.2s ease;
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+  * {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+
+    background-color: var(--bg);
+    color: var(--text);
+
+    a {
+      font-weight: bold;
+      color: var(--text);
+      border-bottom: 2px solid transparent;
+      transition: 200ms ease;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  @media only screen and (max-width: 1168px) {
+    *{
+      font-size: 1rem;
+    }
+  }
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide {
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes opacityUp {
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes scaleUp {
+    to {
+      scale: 1;
+    }
+  }
+}

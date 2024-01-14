@@ -5,10 +5,6 @@
     </div>
 </template>
 
-<script setup>
-  import '../style/global.scss'
-</script>
-
 <style lang="scss" scoped>
   div {
     display: flex;

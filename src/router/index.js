@@ -1,62 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
 
 const title = 'João Borba'
 const routes = [
-  // Home Page
   {
     path: '/',
     name: 'home',
     meta: {
       title: `${ title } : Home`
     },
-    component: () => import('../../0-Global/views/HomeView.vue'),
-  },
-  // Curriculo
-  {
-    path: "/curriculo/",
-    redirect: 'curriculo/home'
+    component: HomeView,
   },
   {
-    path: '/curriculo/home',
-    name: 'home curriculo',
-    meta: {
-      title: `Currículo : Home`
-    },
-    component: () => import('../../1-Curriculo/views/HomeView.vue'),
-  },
-  {
-    path: '/curriculo/experiencia',
+    path: '/experiencia',
     name:'experiencia',
     meta: {
-      title: `Currículo : Experiência`
+      title: `${ title } : Experiência`
     },
-    component: () => import('../../1-Curriculo/views/ExperienciaView.vue'),
+    component: () => import('../views/ExperienciaView.vue'),
   },
   {
-    path: '/curriculo/conhecimentos',
+    path: '/conhecimentos',
     name:'conhecimentos',
     meta: {
-      title: `Currículo : Conhecimentos`
+      title: `${ title } : Conhecimentos`
     },
-    component: () => import('../../1-Curriculo/views/ConhecimentosView.vue'),
-  },
-  // Financeiro
-  {
-    path: "/financeiro/",
-    redirect: 'financeiro/home'
-  },
-  {
-    path: '/financeiro/home',
-    name: 'financeiro curriculo',
-    meta: {
-      title: `Financeiro : Home`
-    },
-    component: () => import('../../2-Financeiro/views/HomeView.vue'),
-  },
-  // Not Found
-  {
-    path: "/:catchAll(.*)",
-    redirect: '/404'
+    component: () => import('../views/ConhecimentosView.vue'),
   },
   {
     path: '/404',
@@ -64,7 +33,11 @@ const routes = [
     meta: {
       title: `${ title } : Not Found`
     },
-    component: () => import('../../0-Global/views/NotFoundView.vue'),
+    component: () => import('../views/NotFoundView.vue'),
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: '/404'
   }
 ]
 
